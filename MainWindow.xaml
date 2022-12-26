@@ -1,0 +1,20 @@
+﻿<Window x:Class="bomberman.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bomberman"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Canvas x:Name="Canvas" Margin="0,54,0,0" Background ="#FFCEC7C7"  >
+
+            <Image x:Name="LittleHuman" Height="{Binding ActualHeight, ElementName=bomb }" Width="{Binding ActualWidth, ElementName=bomb}" Canvas.Left="48" Source="/LittleHuman.jpg" Stretch="Fill" Canvas.Top="133"  KeyDown="LittleHuman_KeyDown" HorizontalAlignment="Left" VerticalAlignment="Center"   />
+            <TextBox x:Name="TextBox" Canvas.Left="288" TextWrapping="Wrap" Text="test" Canvas.Top="249" Width="120"  />
+            <Image x:Name="bomb" Height="40" Width="40" Canvas.Left="139" Source="/bomb.jpg" Canvas.Top="131"  RenderTransformOrigin="0.709,0.5" KeyDown="bomb_KeyDown"  />
+            <Label x:Name="lblSeconds" Content="Label" Canvas.Left="334" Canvas.Top="301"/>
+
+        </Canvas>
+
+    </Grid>
+</Window>
